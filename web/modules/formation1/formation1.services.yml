@@ -1,3 +1,7 @@
 services:
   formation1.example:
     class: Drupal\formation1\Example
+
+  formation1.example2:
+    class: Drupal\formation1\Example2
+    arguments: ['@formation1.example']
