@@ -64,6 +64,21 @@ class Formation3 extends ContentEntityBase implements Formation3Interface {
   /**
    * {@inheritdoc}
    */
+  public function getStatus() {
+    return $this->get('status')->value;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function setStatus($status) {
+    $this->set('status', $status);
+    return $this;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
 
     $fields = parent::baseFieldDefinitions($entity_type);
@@ -75,6 +90,23 @@ class Formation3 extends ContentEntityBase implements Formation3Interface {
       ->setSetting('max_length', 255)
       ->setDisplayOptions('form', [
         'type' => 'string_textfield',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('form', TRUE)
+      ->setDisplayOptions('view', [
+        'label' => 'hidden',
+        'type' => 'string',
+        'weight' => -5,
+      ])
+      ->setDisplayConfigurable('view', TRUE);
+
+    $fields['status'] = BaseFieldDefinition::create('list_string')
+      ->setLabel(t('Status'))
+      ->setDescription(t('The status of the formation3 entity.'))
+      ->setRequired(TRUE)
+      ->setSetting('allowed_values', ['draft', 'review', 'validated'])
+      ->setDisplayOptions('form', [
+        'type' => 'options_select',
         'weight' => -5,
       ])
       ->setDisplayConfigurable('form', TRUE)
