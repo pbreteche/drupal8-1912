@@ -1,0 +1,3 @@
+services:
+  formation1.example:
+    class: Drupal\formation1\Example
