@@ -19,6 +19,11 @@ class Example2Test extends UnitTestCase {
   private $example2;
 
   /**
+   * @var \Drupal\formation1\Example2
+   */
+  private $example2bis;
+
+  /**
    * {@inheritdoc}
    */
   protected function setUp() {
@@ -29,6 +34,11 @@ class Example2Test extends UnitTestCase {
       ->with(5)
       ->willReturn(25);
     $this->example2 = new Example2($exampleMock);
+
+    $prophecy = $this->prophesize(Example::class);
+    $prophecy->square(5)->willReturn(25)->shouldBeCalledTimes(1);
+
+    $this->example2bis = new Example2($prophecy->reveal());
   }
 
   /**
@@ -36,6 +46,9 @@ class Example2Test extends UnitTestCase {
    */
   public function testSomething() {
     $result = $this->example2->doSomething(5);
+    $this->assertSame(50, $result);
+
+    $result = $this->example2bis->doSomething(5);
     $this->assertSame(50, $result);
   }
 
