@@ -1,0 +1,5 @@
+entity.formation_config.add_form:
+  route_name: 'entity.formation_config.add_form'
+  title: 'Add formation config'
+  appears_on:
+    - entity.formation_config.collection

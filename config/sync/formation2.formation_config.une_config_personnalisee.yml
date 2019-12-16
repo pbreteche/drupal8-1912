@@ -1,0 +1,7 @@
+uuid: 6b58ba2b-fb1b-4499-8f71-f583b69dc444
+langcode: en
+status: true
+dependencies: {  }
+id: une_config_personnalisee
+label: 'Une config personnalisée'
+description: ''

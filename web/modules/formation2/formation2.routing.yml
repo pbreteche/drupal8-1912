@@ -1,0 +1,31 @@
+entity.formation_config.collection:
+  path: '/admin/structure/formation-config'
+  defaults:
+    _entity_list: 'formation_config'
+    _title: 'formation config configuration'
+  requirements:
+    _permission: 'administer formation_config'
+
+entity.formation_config.add_form:
+  path: '/admin/structure/formation_config/add'
+  defaults:
+    _entity_form: 'formation_config.add'
+    _title: 'Add a formation config'
+  requirements:
+    _permission: 'administer formation_config'
+
+entity.formation_config.edit_form:
+  path: '/admin/structure/formation-config/{formation_config}'
+  defaults:
+    _entity_form: 'formation_config.edit'
+    _title: 'Edit a formation config'
+  requirements:
+    _permission: 'administer formation_config'
+
+entity.formation_config.delete_form:
+  path: '/admin/structure/formation-config/{formation_config}/delete'
+  defaults:
+    _entity_form: 'formation_config.delete'
+    _title: 'Delete a formation config'
+  requirements:
+    _permission: 'administer formation_config'
