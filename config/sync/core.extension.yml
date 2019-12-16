@@ -19,6 +19,7 @@ module:
   file: 0
   filter: 0
   formation2: 0
+  formation3: 0
   help: 0
   history: 0
   image: 0

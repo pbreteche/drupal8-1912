@@ -1,0 +1,21 @@
+{#
+/**
+ * @file
+ * Default theme implementation to present a formation3 entity.
+ *
+ * This template is used when viewing a registered formation3's page,
+ * e.g., /admin/content/formation3)/123. 123 being the formation3's ID.
+ *
+ * Available variables:
+ * - content: A list of content items. Use 'content' to print all content, or
+ *   print a subset such as 'content.title'.
+ * - attributes: HTML attributes for the container element.
+ *
+ * @see template_preprocess_formation3()
+ */
+#}
+<article{{ attributes }}>
+  {% if content %}
+    {{- content -}}
+  {% endif %}
+</article>

@@ -1,0 +1,5 @@
+formation3.add_form:
+  route_name: entity.formation3.add_form
+  title: 'Add formation3'
+  appears_on:
+    - entity.formation3.collection
