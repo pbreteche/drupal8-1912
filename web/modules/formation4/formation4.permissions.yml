@@ -1,0 +1,6 @@
+administer formation4 types:
+  title: 'Administer formation4 types'
+  description: 'Maintain the types of formation4 entity.'
+  restrict access: true
+access formation4 overview:
+  title: 'Access formation4 overview page'

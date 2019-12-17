@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for Formation 6 module.
+ *
+ * @DCG
+ * This file is no longer required in Drupal 8.
+ * @see https://www.drupal.org/node/2217931
+ */
+
+/**
+ * Implements hook_help().
+ */
+function formation6_help(
+  $route_name,
+  \Drupal\Core\Routing\RouteMatchInterface $route_match
+) {
+  if ($route_name == 'help.page.formation6') {
+    $basic = \Drupal::service('formation6.basic');
+    return $basic->getHelpText();
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function formation6_theme($existing, $type, $theme, $path) {
+  return [
+    'help' => [
+      'template' => 'help',
+    ]
+  ];
+}

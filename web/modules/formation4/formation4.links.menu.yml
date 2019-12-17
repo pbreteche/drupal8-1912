@@ -1,0 +1,5 @@
+entity.formation4_type.collection:
+  title: 'formation4 types'
+  parent: system.admin_structure
+  description: 'Manage and CRUD actions on formation4 type.'
+  route_name: entity.formation4_type.collection

@@ -1,0 +1,11 @@
+formation4.type_add:
+  route_name: entity.formation4_type.add_form
+  title: 'Add formation4 type'
+  appears_on:
+    - entity.formation4_type.collection
+
+formation4.add_page:
+  route_name: entity.formation4.add_page
+  title: 'Add formation4'
+  appears_on:
+    - entity.formation4.collection

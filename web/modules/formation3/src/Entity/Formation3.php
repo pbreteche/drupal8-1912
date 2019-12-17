@@ -103,6 +103,7 @@ class Formation3 extends ContentEntityBase implements Formation3Interface {
     $fields['status'] = BaseFieldDefinition::create('list_string')
       ->setLabel(t('Status'))
       ->setDescription(t('The status of the formation3 entity.'))
+      ->setPropertyConstraints('value', ['Choice' => ['choices' =>['review', 'validated'] ]])
       ->setRequired(TRUE)
       ->setSetting('allowed_values', ['draft', 'review', 'validated'])
       ->setDisplayOptions('form', [

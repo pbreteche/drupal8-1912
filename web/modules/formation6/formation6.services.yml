@@ -1,0 +1,9 @@
+services:
+  formation6.basic:
+    class: Drupal\formation6\BasicService
+    arguments: ['@formation6.subservice']
+
+  formation6.subservice:
+    class: Drupal\formation6\SubService
+    private: true
+    arguments: ['@twig']

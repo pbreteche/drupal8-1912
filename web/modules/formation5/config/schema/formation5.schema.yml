@@ -1,0 +1,7 @@
+field.value.formation5_numberrange:
+  type: mapping
+  label: Default value
+  mapping:
+    value:
+      type: label
+      label: Value
